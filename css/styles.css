@@ -34,7 +34,36 @@ a{
 .nav-sociales a:hover{
     opacity: 1;
 }
-
+.btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-secundario);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #0874B8;
+}
+.badge{
+    background: var(--color-principal);
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 5px 15px;
+    cursor: default;
+    transition: all .5s;
+}
 /* MENU PRINCIPAL */
 
 .nav-principal{
@@ -97,3 +126,37 @@ a{
 .nav-principal .enlaces a:nth-child(3):hover{
     background: var(--color-secundario);
 }
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 95px);
+    padding-left: 50px;
+}
+header .imagen-header{
+    width: 60%;
+    height: 100%;
+    background-image: url(/img/game1.png);
+    background-size: cover;
+    background-position: center;
+    clip-path: circle(90% at 92% 50%);
+    z-index: 2;
+    transition: all .5s;
+}
+header .content-header{
+    width: 50%;
+}
+header .content-header *{
+    margin: 10px 0; 
+}
+header .content-header h3{
+    font-size: 65px;
+    font-weight: 300
+}
+header .content-header p{
+    font-size: 19px;
+}
+
