@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-/* GENERALES */
+/** GENERALES */
 :root{
     --color-principal: #6610F2;
     --color-secundario: #0C91E5;
@@ -64,7 +64,7 @@ a{
     cursor: default;
     transition: all .5s;
 }
-/* MENU PRINCIPAL */
+/** MENU PRINCIPAL */
 
 .nav-principal{
     width: 100%;
@@ -127,7 +127,7 @@ a{
     background: var(--color-secundario);
 }
 
-/* HEADER */
+/** HEADER */
 header{
     display: flex;
     justify-content: flex-start;
@@ -160,3 +160,84 @@ header .content-header p{
     font-size: 19px;
 }
 
+/** DESTACADOS */
+.destacados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.destacados::before{
+    content: 'Destacados';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12em;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.07);
+    
+}
+.game{
+    position: relative;
+    width: 45%;
+    height: 350px;
+    margin: 40px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5s;
+}
+.game:nth-child(1){
+    background: linear-gradient(45deg, #10214C, #DA3DBE);
+}
+.game:nth-child(2){
+    background: linear-gradient(45deg, #254bac, #e1ee25);
+}
+.game:nth-child(3){
+    background: linear-gradient(45deg, #94aae1, #e92922);
+}
+.game:nth-child(4){
+    background: linear-gradient(45deg, #17a4c8, #d62187);
+}
+.game img{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 380px;
+    z-index: 1;
+    transition: all .5s;
+}
+.game:hover img{
+    left: 75%;
+    height: 400px;
+}
+.game .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    color: #FFF;
+    transition: all .5s;
+    opacity: 0;
+}
+.game:hover .content{
+    opacity: 1;
+    left: 0;
+}
+.game .content h2{
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+.game .content a{
+    position: relative;
+    color: #000;
+    background: #FFF;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-weight: 700;
+}
