@@ -241,3 +241,50 @@ header .content-header p{
     margin-top: 10px;
     font-weight: 700;
 }
+
+/**ARTICULOS */
+
+/*? Titulo de articulo */
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 70px 0 20px 0;
+}
+.title::before{
+    position: absolute;
+    content: 'Blog';
+    font-size: 12em;
+    top: -80px;
+    color: rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    z-index: -1;
+}
+.title h1{
+    font-size: 75px;
+    font-weight: 300;
+}
+.title .badget-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px;
+}
+.title .badget-container .badge{
+    background: transparent;
+    color: var(--gris-default);
+    border: 1px solid var(--gris-default);
+    transition: all .5s;
+}
+.title .badget-container .badge:hover{
+    background: var(--color-principal);
+    color: #FFF;
+    border: 1px solid transparent;
+}
